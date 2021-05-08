@@ -14,7 +14,7 @@ stage('checkout')
    {
   sh "${mavenHome}/bin/mvn sonar:sonar"
    }
-/* stage('UploadArtifactsIntoNexus')
+stage('UploadArtifactsIntoNexus')
    {
   sh "${mavenHome}/bin/mvn deploy"
    }
@@ -32,5 +32,5 @@ emailext body: '''Build is over
 Regards,
 Subhani
 #9848345618''', subject: 'Build is over', to: 'subhanireshu@gmail.com'
-}*/
+}
 }
