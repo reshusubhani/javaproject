@@ -22,7 +22,7 @@ stage('UploadArtifactsIntoNexus')
   {
    sshagent(['a4472a1d-2c0e-48bf-82b6-41b50307f0e2'])
      {
-      sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@54.90.224.101://opt/apache-tomcat-9.0.45/webapps"
+      sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@54.224.198.33/://opt/apache-tomcat-9.0.45/webapps"
      }
   }
 stage('EmailNotification')
