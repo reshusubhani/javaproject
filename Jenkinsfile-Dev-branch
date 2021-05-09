@@ -1,4 +1,4 @@
-node
+node('nodes')
 {
   def mavenHome = tool name: "maven3.8.1"  
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
@@ -6,7 +6,7 @@ stage('checkout')
    {
    git branch: 'dev', credentialsId: '713c61b7-a94a-459a-8a5b-763567813e07', url: 'https://github.com/reshusubhani/javaproject.git'
    }
-  stage('build')
+  /*stage('build')
    {
    sh "${mavenHome}/bin/mvn clean package"
    }
@@ -32,5 +32,5 @@ emailext body: '''Build is over
 Regards,
 Subhani
 #9848345618''', subject: 'Build is over', to: 'subhanireshu@gmail.com'
-}
+}*/
 }
